@@ -11,7 +11,7 @@ public:
             for(int j = 0;j<i;j++){
                 if(arr[i]%arr[j] == 0){
                     int x = arr[i]/arr[j];
-                    if(find(arr.begin(), arr.end(), x) != arr.end()){
+                    if(index.find(x) != index.end()){
                         dp[i] = (dp[i] + dp[j]*dp[index[x]])%MOD;
                     }
                 }
