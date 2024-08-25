@@ -13,10 +13,6 @@ class Solution {
 public:
     void solve(TreeNode* root,vector<int>& ans){
         if(root == nullptr) return;
-        if(root->left == nullptr && root->right == nullptr) {
-            ans.push_back(root->val);
-            return;
-        }
         solve(root->left,ans);
         solve(root->right,ans);
         ans.push_back(root->val);
